@@ -1,0 +1,379 @@
+
+ /* General Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f5;
+    color: #26352b;
+    line-height: 1.6;
+}
+
+
+/* Navigation Bar */
+
+header {
+    background: #155c3b;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a8e6bd;
+}
+
+
+/* Home Section */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(
+        120deg,
+        #155c3b,
+        #3c9b65
+    );
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: white;
+    color: #155c3b;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.main-btn:hover {
+    background: #d9f5e2;
+}
+
+
+/* Common Container */
+
+.container {
+    padding: 55px 7%;
+}
+
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: #155c3b;
+}
+
+
+/* Search Filters */
+
+.filters {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.filters input {
+    flex: 2;
+    min-width: 200px;
+}
+
+.filters select {
+    flex: 1;
+    min-width: 150px;
+}
+
+
+/* Restaurant Cards */
+
+.restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(230px, 1fr)
+    );
+    gap: 22px;
+}
+
+.restaurant-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+}
+
+.restaurant-card h3 {
+    color: #155c3b;
+    margin-bottom: 8px;
+}
+
+.restaurant-card p {
+    margin: 7px 0;
+}
+
+.rating-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.five {
+    background: #18864b;
+}
+
+.four {
+    background: #3185c7;
+}
+
+.three {
+    background: #dc9c22;
+}
+
+.notice-badge {
+    background: #d33c3c;
+}
+
+.details-btn {
+    background: #155c3b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.details-btn:hover {
+    background: #267e50;
+}
+
+
+/* Hygiene Rating Section */
+
+.rating-list {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(200px, 1fr)
+    );
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.rating-card {
+    padding: 25px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.rating-card h3 {
+    margin: 10px 0;
+}
+
+.excellent {
+    border-top: 5px solid #18864b;
+}
+
+.good {
+    border-top: 5px solid #3185c7;
+}
+
+.fair {
+    border-top: 5px solid #dc9c22;
+}
+
+.notice {
+    border-top: 5px solid #d33c3c;
+}
+
+
+/* Inspection Scorecard */
+
+.scorecard {
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.scorecard h3 {
+    color: #155c3b;
+    margin-bottom: 15px;
+}
+
+.score-item {
+    margin: 15px 0;
+}
+
+.score-item p {
+    margin-bottom: 5px;
+}
+
+.progress {
+    background: #e3e9e4;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: #26965a;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+/* Complaint Form */
+
+form {
+    background: white;
+    padding: 25px;
+    max-width: 650px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#photoPreview {
+    display: none;
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: #155c3b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #267e50;
+}
+
+#message {
+    margin-top: 15px;
+    color: #18864b;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background: #123e2b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 650px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .container {
+        padding: 35px 5%;
+    }
+
+}
+
+
+/* NEW: Smooth Scrolling to Inspection Scorecard */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#scorecard {
+    scroll-margin-top: 25px;
+}

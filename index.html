@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodSafe - Restaurant Hygiene</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">🍃 FoodSafe</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="#ratings">Ratings</a>
+            <a href="#complaint">Report Issue</a>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+
+        <h1>Eat Safe. Stay Healthy.</h1>
+
+        <p>
+            Discover restaurant hygiene ratings
+            and make safer food choices.
+        </p>
+
+        <a href="#restaurants" class="main-btn">
+            Explore Restaurants
+        </a>
+
+    </section>
+
+
+    <!-- Restaurant Search Section -->
+    <section class="container" id="restaurants">
+
+        <h2>Find Safe Restaurants</h2>
+
+        <p>Search restaurants and check their hygiene ratings.</p>
+
+        <div class="filters">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search restaurant name..."
+            >
+
+            <select id="localityFilter">
+                <option value="">All Localities</option>
+                <option value="Phagwara">Phagwara</option>
+                <option value="Jalandhar">Jalandhar</option>
+                <option value="Ludhiana">Ludhiana</option>
+            </select>
+
+            <select id="cuisineFilter">
+                <option value="">All Cuisines</option>
+                <option value="Indian">Indian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Fast Food">Fast Food</option>
+                <option value="Italian">Italian</option>
+            </select>
+
+        </div>
+
+        <!-- Restaurant Cards -->
+        <div class="restaurant-list" id="restaurantList">
+
+        </div>
+
+    </section>
+
+
+    <!-- Hygiene Rating Section -->
+    <section class="container" id="ratings">
+
+        <h2>Understanding Hygiene Ratings</h2>
+
+        <div class="rating-list">
+
+            <div class="rating-card excellent">
+                <h2>⭐5 Star</h2>
+                <h3>Excellent Hygiene</h3>
+                <p>Excellent food safety and cleanliness.</p>
+            </div>
+
+            <div class="rating-card good">
+                <h2>⭐ 4 Star</h2>
+                <h3>Good Hygiene</h3>
+                <p>Good hygiene with minor improvements needed.</p>
+            </div>
+
+            <div class="rating-card fair">
+                <h2>⭐ 3 Star</h2>
+                <h3>Fair Hygiene</h3>
+                <p>Basic standards maintained.</p>
+            </div>
+
+            <div class="rating-card notice">
+                <h2>⚠️ Notice</h2>
+                <h3>Under Notice</h3>
+                <p>Violations reported. Further inspection required.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Inspection Scorecard -->
+    <section class="container">
+
+        <h2>Restaurant Inspection Scorecard</h2>
+
+        <p>Select a restaurant to view its inspection details.</p>
+
+        <div id="scorecard" class="scorecard">
+
+            <h3>Inspection Details</h3>
+
+            <p id="scorecardMessage">
+                Click the View Details button on a restaurant card.
+            </p>
+
+            <div id="scoreDetails"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Complaint Section -->
+    <section class="container" id="complaint">
+
+        <h2>Report a Food Safety Issue</h2>
+
+        <p>
+            Help us maintain food safety by reporting
+            contamination or unhygienic conditions.
+        </p>
+
+        <form id="complaintForm">
+
+            <label>Your Name</label>
+            <input
+                type="text"
+                id="userName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Restaurant Name</label>
+            <input
+                type="text"
+                id="restaurantName"
+                placeholder="Enter restaurant name"
+                required
+            >
+
+            <label>Type of Complaint</label>
+
+            <select id="complaintType" required>
+
+                <option value="">Select an issue</option>
+                <option value="Foreign object in food">
+                    Foreign object in food
+                </option>
+
+                <option value="Spoiled food">
+                    Spoiled food
+                </option>
+
+                <option value="Unhygienic kitchen">
+                    Unhygienic kitchen
+                </option>
+
+                <option value="Poor water quality">
+                    Poor water quality
+                </option>
+
+            </select>
+
+            <label>Description</label>
+
+            <textarea
+                id="description"
+                placeholder="Describe the problem..."
+                required
+            ></textarea>
+
+            <label>Upload Photo (Optional)</label>
+
+            <input
+                type="file"
+                id="photo"
+                accept="image/*"
+            >
+
+            <img id="photoPreview" alt="Uploaded complaint preview">
+
+            <button type="submit" class="submit-btn">
+                Submit Complaint
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>🍃 FoodSafe</h3>
+
+        <p>Promoting safe food and healthy communities.</p>
+
+        <p>© 2026 FoodSafe</p>
+    </footer>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
